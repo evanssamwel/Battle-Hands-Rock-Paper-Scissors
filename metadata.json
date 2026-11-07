@@ -1,0 +1,6 @@
+{
+  "name": "Battle Hands – Rock Paper Scissors",
+  "description": "Arcade battle Rock Paper Scissors with animated clashing hands, multiple intelligent AI difficulties, live fight commentary, scoreboard, and in-depth player statistics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

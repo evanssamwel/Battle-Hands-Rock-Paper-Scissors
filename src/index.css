@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Oswald', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+  }
+
+  .font-mono-numbers {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom battle animations */
+@keyframes shake-fist-left {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-14deg) translateY(-28px);
+  }
+  50% {
+    transform: rotate(6deg) translateY(12px);
+  }
+  75% {
+    transform: rotate(-8deg) translateY(-16px);
+  }
+}
+
+@keyframes shake-fist-right {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0) scaleX(-1);
+  }
+  25% {
+    transform: rotate(-14deg) translateY(-28px) scaleX(-1);
+  }
+  50% {
+    transform: rotate(6deg) translateY(12px) scaleX(-1);
+  }
+  75% {
+    transform: rotate(-8deg) translateY(-16px) scaleX(-1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(245, 158, 11, 0.45);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-fist-left {
+  animation: shake-fist-left 0.45s ease-in-out infinite;
+}
+
+.animate-fist-right {
+  animation: shake-fist-right 0.45s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-gentle 3s ease-in-out infinite;
+}
+
